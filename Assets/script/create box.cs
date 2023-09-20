@@ -7,6 +7,8 @@ public class createbox : MonoBehaviour
     // Start is called before the first frame update
     public GameObject yellow_cube;
     public GameObject red_cube;
+    public GameObject green_cube;
+    public GameObject white_cube;
     public float updateInterval;  // 更新的時間
     private float timer = 0f;
     void Start()
@@ -29,13 +31,21 @@ public class createbox : MonoBehaviour
     {        
         float randomValue = Random.Range(0f, 1f);
         
-        if (randomValue < 0.5f)
+        if (randomValue > 0.75f)
         {
             Instantiate(yellow_cube, transform.position, Quaternion.identity);
         }
-        else
+        else if (randomValue > 0.5f)
         {
             Instantiate(red_cube, transform.position, Quaternion.identity);
+        }
+        else if (randomValue > 0.25f)
+        {
+            Instantiate(green_cube, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(white_cube, transform.position, Quaternion.identity);
         }
     }
 }

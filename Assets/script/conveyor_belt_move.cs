@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class conveyor_belt_move : MonoBehaviour
 {
-    public float speed;
+    public float speed = 0;
     public Vector3 direction;
     public List<GameObject> onBlet;
     // Start is called before the first frame update
